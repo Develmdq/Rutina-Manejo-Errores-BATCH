@@ -23,7 +23,7 @@
       *      (u otros campos segun corresponda)                        *
       *                                                                *
       *   3. INVOCAR LA RUTINA:                                        *
-      *      CALL 'PGMERROR' USING WS-ERROR                            *
+      *      CALL 'RUTERRBA' USING WS-ERROR                            *
       *                                                                *
       ******************************************************************
 

@@ -2,30 +2,34 @@
        IDENTIFICATION DIVISION.
        PROGRAM-ID. RUTERRBA.
 
-      ******************************************************************
-      *       SUBPROGRAMA CENTRALIZADO DE MANEJO DE ERRORES            *
-      ******************************************************************
-      * AUTOR : MARCET EDUARDO                      FECHA: 2026        *
-      ******************************************************************
-      * FUNCION:                                                       *
-      *   RECIBE LA ESTRUCTURA DE ERROR DEL PROGRAMA LLAMADOR,         *
-      *   MUESTRA UN BLOQUE INFORMATIVO EN EL SPOOL                    *
-      ******************************************************************
-      * USO DESDE EL PROGRAMA LLAMADOR:                                *
-      *                                                                *
-      *   1. INCLUIR LA COPY EN WORKING-STORAGE:                       *
-      *      COPY CPERROR.                                             *
-      *                                                                *
-      *   2. ANTES DE INVOCAR LA RUTINA, CARGAR LOS CAMPOS             *
-      *      RELEVANTES DE WS-ERROR SEGUN EL CONTEXTO DEL ERROR:       *
-      *      MOVE 'MIPGM001' TO WS-ERR-PROGRAMA                        *
-      *      MOVE SQLCA     TO WS-ERR-SQLCA                            *
-      *      (u otros campos segun corresponda)                        *
-      *                                                                *
-      *   3. INVOCAR LA RUTINA:                                        *
-      *      CALL 'RUTERRBA' USING WS-ERROR                            *
-      *                                                                *
-      ******************************************************************
+      *>**
+      *=         SUBPROGRAMA CENTRALIZADO DE MANEJO DE ERRORES
+      *- @autor:        Eduardo Marcet
+      *- @fecha:        2026-01-15
+      *- @version:      1.0
+      *- @licencia:     MIT
+      *- @modificacion: 2026-05-28
+      *- @change: 2026-01-15 EMarcet Creacion inicial del programa
+      *-
+      *-* FUNCION:
+      *  RECIBE LA ESTRUCTURA DE ERROR DEL PROGRAMA LLAMADOR y MUESTRA
+      *  UN BLOQUE INFORMATIVO EN EL SPOOL PARA EL OPERADOR DE TURNO
+      *-
+      *-* USO DESDE EL PROGRAMA LLAMADOR:
+      *
+      *   1. INCLUIR LA COPY EN WORKING-STORAGE:
+      *      COPY CPERROR.
+      *
+      *   2. ANTES DE INVOCAR LA RUTINA, CARGAR LOS CAMPOS
+      *      RELEVANTES DE WS-ERROR SEGUN EL CONTEXTO DEL ERROR:
+      *      MOVE 'MIPGM001' TO WS-ERR-PROGRAMA
+      *      MOVE SQLCA     TO WS-ERR-SQLCA
+      *      (u otros campos segun corresponda)
+      *
+      *   3. INVOCAR LA RUTINA DINAMICAMENTE:
+      *      CALL WS-RUTERRBA USING WS-ERROR
+      *-
+      *>**
 
       ******************************************************************
        ENVIRONMENT DIVISION.

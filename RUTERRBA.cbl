@@ -3,7 +3,7 @@
        PROGRAM-ID. RUTERRBA.
 
       *>**
-      *=         SUBPROGRAMA CENTRALIZADO DE MANEJO DE ERRORES
+      *= RUTINA DE MANEJO DE ERRORES PARA PROGRAMAS BATCH EN COBOL
       *- @autor:        Eduardo Marcet
       *- @fecha:        2026-01-15
       *- @version:      1.0
@@ -11,14 +11,13 @@
       *- @modificacion: 2026-05-28
       *- @change: 2026-01-15 EMarcet Creacion inicial del programa
       *-
-      *-* FUNCION:
+      *-* FUNCION
       *  RECIBE LA ESTRUCTURA DE ERROR DEL PROGRAMA LLAMADOR y MUESTRA
       *  UN BLOQUE INFORMATIVO EN EL SPOOL PARA EL OPERADOR DE TURNO
       *-
-      *-* USO DESDE EL PROGRAMA LLAMADOR:
+      *-* USO DESDE EL PROGRAMA LLAMADOR
       *
-      *   1. INCLUIR LA COPY EN WORKING-STORAGE:
-      *      COPY CPERROR.
+      *   1. INCLUIR LA COPY EN WORKING-STORAGE:   COPY CPERROR.
       *
       *   2. ANTES DE INVOCAR LA RUTINA, CARGAR LOS CAMPOS
       *      RELEVANTES DE WS-ERROR SEGUN EL CONTEXTO DEL ERROR:

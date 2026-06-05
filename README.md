@@ -1,4 +1,4 @@
-🛠️ Rutina (Subprograma - Módulo): RUTERRBA (RUTINA ERRORES BATCH - Gestión de Errores) [![Documentation](https://img.shields.io/badge/docs-READ%20NOW-2ea44f?style=for-the-badge&logo=readthedocs&logoColor=white)](https://develmdq.github.io/docs/err-batch.html)
+🛠️ <h1>Rutina (Subprograma - Módulo)</h1>: RUTERRBA (RUTINA ERRORES BATCH - Gestión de Errores) [![Documentation](https://img.shields.io/badge/docs-READ%20NOW-2ea44f?style=for-the-badge&logo=readthedocs&logoColor=white)](https://develmdq.github.io/docs/err-batch.html)
 
 **Proyecto como parte de mi especialización en arquitectura COBOL".**
 Esta rutina funcionará como el controlador central de errores del sistema, diseñado para transformar fallos críticos en información clara y procedimiento de cierre controlado.
